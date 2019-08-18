@@ -1,0 +1,62 @@
+<div class="container">
+  <h1>Event Binding</h1>
+  <button class="btn" (click)="onClickButton()">Just click me please!</button>
+
+<!--  -->
+
+  <input placeholder="Wpisz coś"
+         (input)="inputText = $event.target.value">
+  {{inputText}}
+
+<!--  -->
+
+  <input placeholder="Wpisz coś"
+         #inputBlur
+         (input)="0"
+         (blur)="inputBlur.value = ''">
+  {{inputBlur.value}}
+
+<!--  -->
+
+  <input placeholder="Kliknij"
+         (focusout)="focus = 'I am lost your focus :-('"
+          (focusin)="focus = ''">
+  {{focus}}
+
+<!--  -->
+
+  <div class="mosue-container" (mousemove)="onMouseMove($event)">
+    Najedź myszką!<br>
+    {{mouse}}
+  </div>
+
+<!--  -->
+
+  <input
+    #enterInput
+    placeholder="Wpisz i naciśnij enter a potem escape"
+    (keyup.enter)="onEnter(enterInput.value); enterInput.value=''"
+    (keyup.escape)="enterList = []">
+  <ul>
+    <li *ngFor="let item of enterList">{{item}}</li>
+  </ul>
+
+<!--  -->
+
+  <div class="mosue-container" (wheel)="isWheel = true" (mouseleave)="isWheel = false">
+    Zakręć kólkiem myszki!
+  </div>
+  <div class="preloader-wrapper big active" *ngIf="isWheel">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</div>

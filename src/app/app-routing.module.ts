@@ -4,6 +4,7 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { PipeComponent } from './pipe/pipe.component';
 import { QuestionMarkComponent } from './question-mark/question-mark.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'ng-for',
     component: NgForComponent
+  },
+  {
+    path: 'event-binding',
+    component: EventBindingComponent
   }
 ];
 
