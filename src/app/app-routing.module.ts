@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { QuestionMarkComponent } from './question-mark/question-mark.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'pipe',
     component: PipeComponent
+  },
+  {
+    path: 'question-mark',
+    component: QuestionMarkComponent
   }
 ];
 

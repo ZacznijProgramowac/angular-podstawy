@@ -1,0 +1,8 @@
+<div class="container">
+  <h4>Question Mark - ?</h4>
+  <p>Próba wyświetlenia pola z obiektu undefined: {{something?.notExist}}</p>
+  <p>To pole istnieje i ma wartość: {{someObject.exist}}</p>
+  <p>Tego pola nie ma, ale będzie za 3 sekundy: {{someObject.waiting?.text}}</p>
+  <p>Opcja z ngIf</p>
+  <p *ngIf="someObject.waiting && someObject.waiting.text">{{someObject.waiting.text}}</p>
+</div>
