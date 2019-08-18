@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { QuestionMarkComponent } from './question-mark/question-mark.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'question-mark',
     component: QuestionMarkComponent
+  },
+  {
+    path: 'ng-for',
+    component: NgForComponent
   }
 ];
 
