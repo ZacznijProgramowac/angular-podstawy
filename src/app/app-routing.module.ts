@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { InterpolationComponent } from './interpolation/interpolation.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'interpolation',
     component: InterpolationComponent
+  },
+  {
+    path: 'pipe',
+    component: PipeComponent
   }
 ];
 
@@ -18,4 +23,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

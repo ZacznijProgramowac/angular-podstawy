@@ -1,16 +1,18 @@
-<h2>{{ title }}</h2>
+<div class="container">
+  <h2>{{ title }}</h2>
 
-<p>{{ getInfo() }}</p>
+  <p>{{ getInfo() }}</p>
 
-<p>{{ info }}</p>
+  <p>{{ info }}</p>
 
-<p>Obliczone wyrażenie: {{ (2 + 2 - 1) * 4 }}</p>
+  <p>Obliczone wyrażenie: {{ (2 + 2 - 1) * 4 }}</p>
 
-<p>Obliczone wyrażęnie i wywołanie metody: {{ (50 + 50) / getNumber() }}</p>
+  <p>Obliczone wyrażęnie i wywołanie metody: {{ (50 + 50) / getNumber() }}</p>
 
-<p>Wyświetlenie typu boolean: {{ show }}</p>
+  <p>Wyświetlenie typu boolean: {{ show }}</p>
 
-<p>
-  Wywołanie "skróconego ifa":
-  {{ show ? "Zmienna show jest true" : "Zmiena show jest false" }}
-</p>
+  <p>
+    Wywołanie "skróconego ifa":
+    {{ show ? "Zmienna show jest true" : "Zmiena show jest false" }}
+  </p>
+</div>
