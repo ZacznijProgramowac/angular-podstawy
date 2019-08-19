@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Property binding</h1>
+  <p>Bindowanie property [img]</p>
+  <img [src]="imageURL">
+
+  <p>Bindowanie property [disabled]</p>
+  <button [disabled]="isDisabled">Button</button>
+
+  <p>Bindowanie property [value]</p>
+  <input [value]="taskTitle">
+
+  <p>Bindowanie property [rows] [cols]</p>
+  <textarea [rows]="rowsNum" [cols]="colsNum"></textarea>
+
+  <p>Bindowanie property [class]</p>
+  <div [ngClass]="someClassCss"></div>
+
+  <p>Bindowanie property [style]</p>
+  <div [ngClass]="someClassCss" [style.background]="'red'"></div>
+
+  <p>Bindowanie do przycisku i trick z eventem</p>
+  <input placeholder="Zacznij pisać, a będzie odblokowane" #blockedInput (input)="0"/>
+  <button class="btn" [disabled]="blockedInput.value ===''">Wyślij</button>
+
+  <p>To bindowanie nie działa</p>
+  <img src="imageURL">
+
+  <p>Tak lepiej nie bindować</p>
+  <input [value]="'Stały tekst'">
+
+  <p>Lepiej to zrobić tak</p>
+  <input value="Stały tekst">
+
+  <p>Bindowanie interpolacją</p>
+  <img src="{{blackLogo}}">
+
+  <p>Wyświetlenie HTML-a nie działa</p>
+  <p>{{htmlValue}}</p>
+
+  <p>Wyświetlenie HTML-a za pomocą [innerHTML]</p>
+  <p [innerHTML]="htmlValue"></p>
+
+  <div [class.highlight]="isHighlight">Ten div jest podświetlony</div>
+
+  <button class="btn" [style.color]="isDisabled ? 'red': 'yellow'">Wyczyść</button>
+</div>
