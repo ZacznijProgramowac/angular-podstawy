@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Ng Model</h1>
+  <p>Żeby ng-Model działał, należy zaimportować FormsModule w app.module.ts</p>
+
+  <input placeholder="Tradycyjny ngModel" [(ngModel)]="inputModel">
+  <p>Wartość: {{inputModel}}</p>
+
+  <input placeholder="ngModel rozbity na property i event binding"
+         [ngModel]="inputProperty"
+         (ngModelChange)="inputProperty = $event">
+  <p>Wartość: {{inputProperty}}</p>
+
+  <input placeholder="Własny ngModel ;-)"
+         [value]="ownModel"
+         (change)="ownModel = $event.target.value">
+  <p>Wartość: {{ownModel}}</p>
+
+  <textarea [(ngModel)]="texAreaModel"></textarea>
+
+  <button class="btn"
+          [disabled]="inputModel===''">{{inputModel === '' ? 'Wyłączony' : 'Włączony'}}</button>
+</div>
