@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>*ngIf, ngSwitch</h1>
+
+  <p>Przykład ngSwitch</p>
+  Dzisiaj jest:
+  <ng-container [ngSwitch]="day">
+    <span *ngSwitchCase="1">Poniedziałek</span>
+    <span *ngSwitchCase="2">Wtorek</span>
+    <span *ngSwitchCase="3">Środa</span>
+    <span *ngSwitchCase="4">Czwartek</span>
+    <span *ngSwitchCase="5">Piątek</span>
+    <span *ngSwitchCase="6">Sobota</span>
+    <span *ngSwitchDefault>To na pewno niedziela!</span>
+  </ng-container>
+
+  <p>*ngIf, else</p>
+  <p *ngIf="day === 6; else notSaturday">Dzisiaj jest sobota!</p>
+  <ng-template #notSaturday>
+    <p>Dzisiaj nie jest sobota</p>
+  </ng-template>
+
+  <p>*ngIf, then, else</p>
+  <ng-container *ngIf="day === 6; then saturday; else notSaturday"></ng-container>
+  <ng-template #saturday>
+    <p>Dzisiaj jest sobota</p>
+  </ng-template>
+  <ng-template #notSaturday>
+    <p>Dzisiaj nie jest sobota</p>
+  </ng-template>
+</div>

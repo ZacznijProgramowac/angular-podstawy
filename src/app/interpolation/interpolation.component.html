@@ -10,9 +10,17 @@
   <p>Obliczone wyrażęnie i wywołanie metody: {{ (50 + 50) / getNumber() }}</p>
 
   <p>Wyświetlenie typu boolean: {{ show }}</p>
-
   <p>
     Wywołanie "skróconego ifa":
     {{ show ? "Zmienna show jest true" : "Zmiena show jest false" }}
   </p>
+
+  <hr>
+  <h2>Nieprawidłowe wyołania interpolacji</h2>
+  <p>Zmuszenie do wywołani na metodzie funkcji toString():</p>
+  <p>{{showObject}}</p>
+  <p>Metoda zwraca obiekt nie typ prosty:</p>
+  <p>{{showObject()}}</p>
+  <p>Wywołanie zmiennej do której przypisany jest obiekt:</p>
+  <p>{{objectProp}}</p>
 </div>

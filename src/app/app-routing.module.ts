@@ -7,6 +7,7 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
+import { NgifSwitchComponent } from './ngif-switch/ngif-switch.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'ng-model',
     component: NgModelComponent
+  },
+  {
+    path: 'ng-if',
+    component: NgifSwitchComponent
   }
 ];
 

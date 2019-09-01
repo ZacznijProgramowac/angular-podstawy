@@ -11,9 +11,10 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
 import { FormsModule } from '@angular/forms';
+import { NgifSwitchComponent } from './ngif-switch/ngif-switch.component';
 
 @NgModule({
-  declarations: [AppComponent, InterpolationComponent, PipeComponent, QuestionMarkComponent, NgForComponent, EventBindingComponent, PropertyBindingComponent, NgModelComponent],
+  declarations: [AppComponent, InterpolationComponent, PipeComponent, QuestionMarkComponent, NgForComponent, EventBindingComponent, PropertyBindingComponent, NgModelComponent, NgifSwitchComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
