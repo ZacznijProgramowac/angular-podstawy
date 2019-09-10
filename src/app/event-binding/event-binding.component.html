@@ -1,51 +1,52 @@
 <div class="container">
-  <h1>Event Binding</h1>
+  <a class="btn" href="/event-binding/exercise">Zadania do wykonania</a>
+  <h2>Event Binding</h2>
+  <!-- Bindowanie na event click -->
   <button class="btn" (click)="onClickButton()">Just click me please!</button>
 
-<!--  -->
-
-  <input placeholder="Wpisz coś"
+  <!-- Bindowanie na event input -->
+  <input placeholder="Zacznij pisać"
          (input)="inputText = $event.target.value">
   {{inputText}}
 
-<!--  -->
-
+  <!-- Blur, wyjście z pola kasuje wartość. Wykorzytany jest trick z eventem input, aby wywołać
+  zdarzenie asynchorniczne. Pozwoli to wyświetlić wartość za pomocą interpolacji. -->
   <input placeholder="Wpisz coś"
          #inputBlur
          (input)="0"
          (blur)="inputBlur.value = ''">
   {{inputBlur.value}}
 
-<!--  -->
-
+  <!-- Wykorzystany event focus. -->
   <input placeholder="Kliknij"
          (focusout)="focus = 'I lost your focus :-('"
-          (focusin)="focus = ''">
+         (focusin)="focus = ''">
   {{focus}}
 
-<!--  -->
-
-  <div class="mosue-container" (mousemove)="onMouseMove($event)">
-    Najedź myszką!<br>
+  <!-- Do eventu mousemove podpinamy metodę, gdzie przesyłamy współrzędne myszki.
+    Za pomocą interpolacji, współrzędne są wyświetlone. -->
+  <div class="mouse-container" (mousemove)="onMouseMove($event.clientX, $event.clientY)">Najedź
+    myszką!
+    <br>
     {{mouse}}
   </div>
 
-<!--  -->
-
+  <!-- Za pomocą klawisza enter, dodajemy wartości do listy.
+       Za pomocą klawisza escape, czyścimy listę -->
   <input
     #enterInput
-    placeholder="Wpisz i naciśnij enter a potem escape"
+    placeholder="Wpisz coś i naciśnij enter, a potem escape"
     (keyup.enter)="onEnter(enterInput.value); enterInput.value=''"
     (keyup.escape)="enterList = []">
   <ul>
     <li *ngFor="let item of enterList">{{item}}</li>
   </ul>
 
-<!--  -->
-
-  <div class="mosue-container" (wheel)="isWheel = true" (mouseleave)="isWheel = false">
+  <!-- Event kółka myszki pokazuje spinner. Opuszczenie pola chowa spinner -->
+  <div class="mouse-container" (wheel)="isWheel = true" (mouseleave)="isWheel = false">
     Zakręć kólkiem myszki!
   </div>
+  <!-- Spinner -->
   <div class="preloader-wrapper big active" *ngIf="isWheel">
     <div class="spinner-layer spinner-blue-only">
       <div class="circle-clipper left">

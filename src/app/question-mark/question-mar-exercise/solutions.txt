@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Ćwiczenia z question mark ?</h2>
+  <h5>1. Wyświetl pole 'text' z obiektyu 'someObject'. W konsoli przeglądarki nie mogą się pojawić
+    żadne błędy</h5>
+  <h6>Wynik: {{someObject?.text}}</h6>
+  <br>
+  <h5>2. Jeżeli znasz *ngIf zrób to samo z użyciem *ngIf</h5>
+  <h6 *ngIf="someObject">Wynik: {{someObject.text}}</h6>
+</div>

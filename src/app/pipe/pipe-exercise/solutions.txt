@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>Ćwiczenia z używania pipe</h2>
+  <h5>1. Użyj 'lowercase' i 'uppercase'</h5>
+  <p>Wyświetl pole 'titleBig': {{titleBig | uppercase}}</p>
+  <p>Wyświetl pole 'titleSmall': {{titleSmall | lowercase}}</p>
+
+  <br>
+
+  <h5>2. Użyj pipe 'number' i wyświetl pole 'pi'</h5>
+  <a href="https://angular.io/api/common/DecimalPipe">Dokumentacja</a>
+  <p>Wyświetl trzy miejsca po przecinku: {{pi | number}}</p>
+  <p>Wyświetl 4 miejsca po przecinku: {{pi | number: '1.4-4'}}</p>
+  <p>Wyświetl tylko liczbę całkowitą: {{pi | number: '1.0-0'}}</p>
+
+  <br>
+
+  <h5>3. Użyj pipe 'currency' i wyświetl pole 'money'</h5>
+  <a href="https://angular.io/api/common/CurrencyPipe">Dokumentacja</a>
+  <p>Wyświetl jako euro: {{money | currency:'EUR'}}</p>
+  <p>Wyświetl jako dolar: {{money | currency:'USD'}}</p>
+  <p>Wyświetl jako złotówki: {{money | currency:'PLN'}}</p>
+  <p>Wyświetl jako złotówki i 4 miejsca po przecinku:
+    {{money | currency:'PLN':'symbol':'1.4-4'}}</p>
+
+  <br>
+
+  <h5>4. Wykorzystaj obiekt 'weekdays'. Uzyj pipe 'i18nSelect' do wyświetlenia angielskich
+    nazw:</h5>
+  <a href="https://angular.io/api/common/I18nSelectPipe">Dokumentacja</a>
+  <p>Poniedziałek to: {{ 'poniedziałek' | i18nSelect: weekdays}}</p>
+  <p>Wtorek to: {{ 'wtorek' | i18nSelect: weekdays}}</p>
+  <p>Środa to: {{ 'środa' | i18nSelect: weekdays}}</p>
+  <p>Czwartek to: {{ 'czwartek' | i18nSelect: weekdays}}</p>
+  <p>Piątek to: {{ 'piątek' | i18nSelect: weekdays}}</p>
+  <p>Sobota to: {{ 'sobota' | i18nSelect: weekdays}}</p>
+  <p>Niedziela to: {{ 'niedziela' | i18nSelect: weekdays}}</p>
+
+  <br>
+
+  <h5>5. Użyj pipe 'json' i wyświetl obiekt 'deepObject'</h5>
+  <a href="https://angular.io/api/common/JsonPipe">Dokumentacja</a>
+  <p>Wyświetl obiekt: {{deepObject | json}}</p>
+
+  <br>
+
+  <h5>6. Użyj pipe 'date' i wyświetl pole 'today'</h5>
+  <a href="https://angular.io/api/common/DatePipe">Dokumentacja</a>
+  <p>Wyświetl tylko datę: {{today | date}}</p>
+  <p>Wyświetl w formacie '9/2/19': {{today | date:'shortDate'}}</p>
+  <p>Wyświetl w przykładowym formacie 'Monday, September 2, 2019': {{today | date:'fullDate'}}</p>
+  <p>Wyświetl minuty i sekundy: {{today | date:'mm:ss'}}</p>
+  <p>Wyświetl godzinę i minuty: {{today | date:'hh:mm'}}</p>
+  <p>Wyświetl tylko rok: {{today | date:'yyyy'}}</p>
+  <p>Wyświetl tylko dzień: {{today | date:'EEEE'}}</p>
+  <p>Wyświetl tylko miesiąc: {{today | date:'MMMM'}}</p>
+
+  <br>
+
+  <h5>7. Jeżeli poznałeś już *ngFor to użyj pippe 'keyvalue' i wyświetl 'key' i 'value' z obiektu
+    'weekdays'</h5>
+  <a href="https://angular.io/api/common/KeyValuePipe">Dokumentacja</a>
+  <p *ngFor="let item of weekdays | keyvalue">
+    {{item.key}} : {{item.value}}
+  </p>
+</div>

@@ -6,17 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./question-mark.component.scss']
 })
 export class QuestionMarkComponent {
+  dog: Animal;
 
-  something: any;
-
-  someObject = {
-    exist: 'To istnieje',
-    waiting: null,
-  };
 
   constructor() {
     setTimeout(() => {
-      this.someObject.waiting = { text: 'Inicjalizacja z opóźnieniem' };
+      this.dog = { name: 'Pies dostał imię Reksio' };
     }, 3000);
   }
+}
+interface Animal{
+  name: string;
 }

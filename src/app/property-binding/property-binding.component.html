@@ -1,46 +1,48 @@
 <div class="container">
+  <a class="btn" href="/property-binding/exercise">Zadania do wykonania</a>
   <h1>Property binding</h1>
-  <p>Bindowanie property [img]</p>
+  <h5>Bindowanie property [img]:</h5>
   <img [src]="imageURL">
 
-  <p>Bindowanie property [disabled]</p>
+  <h5>Bindowanie property [disabled]:</h5>
   <button [disabled]="isDisabled">Button</button>
 
-  <p>Bindowanie property [value]</p>
+  <h5>Bindowanie property [value]:</h5>
   <input [value]="taskTitle">
 
-  <p>Bindowanie property [rows] [cols]</p>
+  <h5>Bindowanie property [rows] [cols]:</h5>
   <textarea [rows]="rowsNum" [cols]="colsNum"></textarea>
 
-  <p>Bindowanie property [class]</p>
+  <h5>Bindowanie propperty [class]:</h5>
   <div [ngClass]="someClassCss"></div>
 
-  <p>Bindowanie property [style]</p>
+  <h5>Bindowanie ppropperty [style]:</h5>
   <div [ngClass]="someClassCss" [style.background]="'red'"></div>
 
-  <p>Bindowanie do przycisku i trick z eventem</p>
+  <h5>Bindowanie do przycisku i trick z eventem:</h5>
   <input placeholder="Zacznij pisać, a będzie odblokowane" #blockedInput (input)="0"/>
   <button class="btn" [disabled]="blockedInput.value ===''">Wyślij</button>
 
-  <p>To bindowanie nie działa</p>
+  <h5>To bindowanie nie działa:</h5>
   <img src="imageURL">
 
-  <p>Tak lepiej nie bindować</p>
+  <h5>Tak lepiej nie bindować:</h5>
   <input [value]="'Stały tekst'">
 
-  <p>Lepiej to zrobić tak</p>
+  <h5>Leppiej to zrobić tak:</h5>
   <input value="Stały tekst">
 
-  <p>Bindowanie interpolacją</p>
+  <h5>Bindowanie interpolacją:</h5>
   <img src="{{blackLogo}}">
 
-  <p>Wyświetlenie HTML-a nie działa</p>
+  <h5>Zły przykład wyświetlenia HTML-a:</h5>
   <p>{{htmlValue}}</p>
 
-  <p>Wyświetlenie HTML-a za pomocą [innerHTML]</p>
+  <h5>Dobry przykład wyświetlenia HTML-a za pomocą [innerHTML]:</h5>
   <p [innerHTML]="htmlValue"></p>
 
-  <div [class.highlight]="isHighlight">Ten div jest podświetlony</div>
+  <div [class.highlight]="isHighlight">podłączenie klasy CSS jeżeli 'isHighlight' jest true.</div>
 
-  <button class="btn" [style.color]="isDisabled ? 'red': 'yellow'">Wyczyść</button>
+  <h5>Napis przycisku zmienia kolor w zależności od wartości pola 'isDisabled'</h5>
+  <button class="btn" [style.color]="isDisabled ? 'red': 'yellow'">Kolor</button>
 </div>

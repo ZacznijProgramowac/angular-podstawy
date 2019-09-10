@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Ćwiczenia z *ngFor</h2>
+
+  <h5>1. Wypisz tablicę 'frameworsk' za pomocą *ngFor i dodaj index:</h5>
+  <ul>
+    <li *ngFor="let framework of frameworks; let i = index">{{i + 1}}. {{framework}}</li>
+  </ul>
+
+  <br>
+
+  <h5>2. Wypisz model i markę samochodu z tablicy 'cars' za pomocą *ngFor:</h5>
+  <ul>
+    <li *ngFor="let car of cars">{{car.mark}} - {{car.model}}</li>
+  </ul>
+
+  <br>
+
+  <h5>3. Wypisz model i markę samochodu z obiektu 'carsObj' za pomocą *ngFor i pipe keyvalue:</h5>
+  <ul>
+    <li *ngFor="let car of carsObj | keyvalue">{{car.key}} - {{car.value}}</li>
+  </ul>
+
+  <br>
+
+  <h5>4. Wypisz z tablicy 'frameworsk' tylko pierwszy i ostatni element. Dodatkowo należy użyć
+    *ngIf:</h5>
+  <ul>
+    <ng-container *ngFor="let framework of frameworks; let first = first; let last = last">
+      <li *ngIf="first">{{framework}}</li>
+      <li *ngIf="last">{{framework}}</li>
+    </ng-container>
+  </ul>
+</div>

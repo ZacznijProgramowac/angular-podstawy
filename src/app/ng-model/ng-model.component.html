@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Ng Model</h1>
+  <a class="btn" href="/ng-model/exercise">Zadania do wykonania</a>
+  <h2>Ng Model</h2>
   <p>Żeby ng-Model działał, należy zaimportować FormsModule w app.module.ts</p>
 
   <input placeholder="Tradycyjny ngModel" [(ngModel)]="inputModel">
@@ -13,10 +14,12 @@
   <input placeholder="Własny ngModel ;-)"
          [value]="ownModel"
          (change)="ownModel = $event.target.value">
-  <p>Wartość: {{ownModel}}</p>
+  <p>Wartość pola: {{ownModel}}</p>
 
+  <p>Textarea ze zbindowaną wartością:</p>
   <textarea [(ngModel)]="texAreaModel"></textarea>
 
+  <p>Przycisk włączy się gdy pierwsze pole będzie miało wartość:</p>
   <button class="btn"
           [disabled]="inputModel===''">{{inputModel === '' ? 'Wyłączony' : 'Włączony'}}</button>
 </div>

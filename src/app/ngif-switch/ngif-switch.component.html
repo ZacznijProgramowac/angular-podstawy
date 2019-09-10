@@ -1,7 +1,8 @@
 <div class="container">
-  <h1>*ngIf, ngSwitch</h1>
+  <a class="btn" href="/ng-if/exercise">Zadania do wykonania</a>
+  <h2>*ngIf, ngSwitch</h2>
 
-  <p>Przykład ngSwitch</p>
+  <h5>Przykład ngSwitch:</h5>
   Dzisiaj jest:
   <ng-container [ngSwitch]="day">
     <span *ngSwitchCase="1">Poniedziałek</span>
@@ -13,13 +14,14 @@
     <span *ngSwitchDefault>To na pewno niedziela!</span>
   </ng-container>
 
-  <p>*ngIf, else</p>
+
+  <h5>Przykład *ngIf, else:</h5>
   <p *ngIf="day === 6; else notSaturday">Dzisiaj jest sobota!</p>
   <ng-template #notSaturday>
     <p>Dzisiaj nie jest sobota</p>
   </ng-template>
 
-  <p>*ngIf, then, else</p>
+  <h5>Przykład *ngIf, then, else: </h5>
   <ng-container *ngIf="day === 6; then saturday; else notSaturday"></ng-container>
   <ng-template #saturday>
     <p>Dzisiaj jest sobota</p>

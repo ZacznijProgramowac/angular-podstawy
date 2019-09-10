@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Ćwiczenia z ngIf, switch</h2>
+  <h5>1. Wykorzystaj *ngFor i ngSwitch i stwórz dla każdego słowa z listy 'daysOfWeek'
+    tłumaczenie</h5>
+  ....
+
+  <h5>Użyj pola 'switch' i podepnij do eventu click w przycisku. Przycisk powinien przełączać
+    elementy. Z pomocą *ngIf spraw aby pokazywał się raz czerwony, raz niebieski prostokąt. </h5>
+  <button class="btn-small" >Przełącznik</button>
+  <div class="div-red">Kolor red</div>
+  <div class="div-blue">Kolor blue</div>
+
+  <h5>Wykonaj to samo ćwiczenie, ale z użyciem ngIf i ng-template </h5>
+  <button class="btn-small">Przełącznik</button>
+  <div class="div-red">Kolor red</div>
+  <ng-template #blue>
+    <div class="div-blue">Kolor blue</div>
+  </ng-template>
+
+  <h5>Użyj ngIf na przycisku. Kontroluj wartość wpisywaną do pola tekstowego. Jeżeli jest jakaś
+    wartość w polu tekstowy, to pokaż przycisk. W innym wypadku powinien być niewdioczny</h5>
+  <input>
+  <button class="btn-small blue">Wyślij</button>
+</div>

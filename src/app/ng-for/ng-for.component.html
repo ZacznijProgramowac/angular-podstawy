@@ -1,16 +1,17 @@
 <div class="container">
-  <h1>Użycie ngFor</h1>
-  Wyświetlenie wszystkich elementów:
+  <a class="btn" href="/ng-for/exercise">Zadania do wykonania</a>
+  <h2>Użycie ngFor</h2>
+  <h5>Wyświetlenie wszystkich elementów:</h5>
   <ul class="collection">
     <li class="collection-item" *ngFor="let item of list"> {{item}}</li>
   </ul>
 
-  Wyświetlenie z indeksem:
+  <h5>Wyświetlenie z indeksem:</h5>
   <ul class="collection">
     <li class="collection-item" *ngFor="let item of list; let i = index"> {{i}}. {{item}}</li>
   </ul>
 
-  Wyświetlenie pierwszy i ostatni:
+  <h5>Wyświetlenie pierwszy i ostatni index:</h5>
   <ul class="collection">
     <ng-container *ngFor="let item of list; let first = first; let last = last">
       <li class="collection-item" *ngIf="first">
@@ -22,7 +23,7 @@
     </ng-container>
   </ul>
 
-  Wyświetlenie parzysty i nieparzysty index:
+  <h5>Wyświetlenie parzysty i nieparzysty element:</h5>
   <ul class="collection">
     <ng-container *ngFor="let item of list; let even = even; let odd = odd">
       <li class="collection-item" *ngIf="even">

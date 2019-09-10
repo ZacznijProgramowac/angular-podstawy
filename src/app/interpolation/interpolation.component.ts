@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class InterpolationComponent {
   title = 'Przykłady interpolacji';
   show = false;
-  objectProp = { name: 'Test test tes' };
+  dog = { name: 'Reksio' };
 
   constructor() {
     // Dodaję asynchorniczne zdarzenie i zmuszam angulara do uruchamiania Change Detection

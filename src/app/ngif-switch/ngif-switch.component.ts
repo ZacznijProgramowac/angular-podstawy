@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ngif-switch',
   templateUrl: './ngif-switch.component.html',
   styleUrls: ['./ngif-switch.component.scss']
 })
-export class NgifSwitchComponent implements OnInit {
+export class NgifSwitchComponent {
   day = new Date().getDay();
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
 }

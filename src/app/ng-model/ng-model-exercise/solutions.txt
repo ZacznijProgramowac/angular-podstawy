@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Ćwiczenia z ngModel</h2>
+  <p>Aktualnie FormsModule jest zaimportowany do AppModule i można korzystać z ngModel.</p>
+  <h5>1. Zbinduj input do pola 'textInput' za pomocą ngModel. Wpisywany tekst powinien pojawić się
+    pod
+    polem tekstowym.</h5>
+  <input [(ngModel)]="textInput">
+  Wpisywany tekst: {{textInput}}
+
+  <h5>2. Ambitne! Na klawisz Enter wartość z pola powinna zostać zapisana do listy. Lita powinna
+    być wyświetlona na bieżąco pod polem tekstowym. Po wpisaniu do listy, pole tekstowe powinno
+    się czyścić.
+  </h5>
+  <input [(ngModel)]="textInput2" (keydown.enter)="onKeydown()">
+  Lista:
+  <ul>
+    <li *ngFor="let text of textList">{{text}}</li>
+  </ul>
+</div>
+
+
+// Potrzebne pola klasy i metody do wykonania zadania numer 2:
+
+  textInput2: string;
+  textList =[];
+
+
+  onKeydown() {
+    this.textList.push(this.textInput2);
+    this.textInput2 = '';
+  }

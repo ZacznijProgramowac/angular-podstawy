@@ -16,8 +16,8 @@ export class EventBindingComponent {
     alert('hahahaha :-)')
   }
 
-  onMouseMove(event: MouseEvent) {
-    this.mouse = event.clientX + ' - ' + event.clientY
+  onMouseMove(clientX: number, clientY: number ) {
+    this.mouse = clientX + ' - ' + clientY
   }
 
   onEnter(value: string) {

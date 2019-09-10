@@ -1,8 +1,8 @@
 <div class="container">
-  <h4>Question Mark - ?</h4>
-  <p>Próba wyświetlenia pola z obiektu undefined: {{something?.notExist}}</p>
-  <p>To pole istnieje i ma wartość: {{someObject.exist}}</p>
-  <p>Tego pola nie ma, ale będzie za 3 sekundy: {{someObject.waiting?.text}}</p>
-  <p>Opcja z ngIf</p>
-  <p *ngIf="someObject.waiting && someObject.waiting.text">{{someObject.waiting.text}}</p>
+  <a class="btn" href="/question-mark/exercise">Zadania do wykonania</a>
+  <h2>Question Mark - ?</h2>
+  <p>Obiekt pojawi się za 3 sekundy, ale dzięki question mark można go bezpiecznie wyświetlić:
+    {{dog?.name}}</p>
+  <p>Opcja z ngIf:</p>
+  <p *ngIf="dog && dog.name">{{dog.name}}</p>
 </div>

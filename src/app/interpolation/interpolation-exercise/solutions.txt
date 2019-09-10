@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Ćwiczenia z interpolacji</h2>
+
+  <h5>1. Wypisz kolejno pola z klasy: 'title', 'num1', 'num2', 'falsity'</h5>
+  <p>To naprawdę fajne {{title}}</p>
+  <p>A imię jego {{num1}} i {{num2}}</p>
+  <p>True jest przeciwieństwem {{falsity}}</p>
+  <br>
+  <h5>2. Wypisz pola z obiektu 'dog'</h5>
+  <p>Mój pies ma na imie: {{dog.name}}</p>
+  <p>Ma lat: {{dog.age}}</p>
+  <p>Jest koloru: {{dog.color}}</p>
+  <br>
+  <h5>3. Wypisz kolejno quotation1 i quotation2: </h5>
+  <p>{{quotation1()}}</p>
+  <p>{{quotation2}}</p>
+  <br>
+  <h5>4. Stwórz wyrażenia: </h5>
+  <p>Dodaj dwie cyfry, odejmij i pomnóż.</p>
+  <p>Wyrażenie: {{(2 + 2 - 3) * 5}}</p>
+  <p>Użyj skróconego if-a i w zależności od gettera 'randomBoolean' jeżeli jest ture wyświetl
+    'tak' jeżeli false 'nie';</p>
+  <p>Wynik: {{randomBoolean ? 'tak' : 'nie'}}</p>
+  <p>Podziel zmienną 'num1' przez metodę 'divider': {{num1 / divider()}}</p>
+  <p>Wynik: {{num1 / divider()}}</p>
+</div>
